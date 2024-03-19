@@ -25,7 +25,6 @@ export const createOrder = createAsyncThunk(
         body: JSON.stringify(payload),
       });
       const dataFromServer = await response.json();
-      thunkApi.dispatch(emptyCart());
       onSuccess && onSuccess(dataFromServer);
     } catch (err) {
       onError && onError(err);

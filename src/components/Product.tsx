@@ -14,6 +14,10 @@ const Products = ({ products }: Props) => {
         display: "flex",
         justifyContent: "center",
         flexWrap: "wrap",
+        width: "80vw",
+        bgcolor: "#EFECEC",
+        margin: "0 auto",
+        mt: 20,
       }}
     >
       {products.map((item) => {
@@ -23,7 +27,7 @@ const Products = ({ products }: Props) => {
             key={item.id}
             style={{ textDecoration: "none" }}
           >
-            <Box sx={{ mr: 5, mb: 3 }}>
+            <Box sx={{ mr: 5, mb: 3, mt: 4 }}>
               <ProductCard
                 title={item.title}
                 description={item.description}

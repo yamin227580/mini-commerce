@@ -12,7 +12,7 @@ interface Props {
 
 const ProductPage = ({ title, description, imageUrl }: Props) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, height: 400 }}>
       <CardActionArea>
         <CardMedia
           component="img"

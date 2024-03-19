@@ -1,5 +1,9 @@
 import { useAppDispatch, useAppSelector } from "@/store/hook";
-import { createOrder, updateQuantity } from "@/store/slices/cartSlice";
+import {
+  createOrder,
+  emptyCart,
+  updateQuantity,
+} from "@/store/slices/cartSlice";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import { Box, Button, Typography } from "@mui/material";
@@ -26,6 +30,7 @@ const Cart = () => {
 
   const onSuccess = (data: any) => {
     router.push(`/confirmation?orderId=${data.orderId}&status=${data.status}`);
+    dispatch(emptyCart());
   };
 
   const onError = () => {};
@@ -35,7 +40,13 @@ const Cart = () => {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        bgcolor: "#EFECEC",
+        width: "50vw",
+        margin: "0 auto",
+      }}
+    >
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         {cartItems.length ? (
           <Box>
@@ -77,7 +88,7 @@ const Cart = () => {
             ))}
           </Box>
         ) : (
-          <Typography variant="h1">Empty cart</Typography>
+          <Typography variant="h3">Empty cart</Typography>
         )}
       </Box>
       {cartItems.length > 0 && (
@@ -91,7 +102,7 @@ const Cart = () => {
               mt: 5,
             }}
           >
-            <Typography variant="h3">
+            <Typography variant="h4">
               Total price: {getCartTotalPrice()}
             </Typography>
             <Button

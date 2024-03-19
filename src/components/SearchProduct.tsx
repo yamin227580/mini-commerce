@@ -19,7 +19,14 @@ const SearchProduct = ({ products, setFilterProducts }: Props) => {
     setFilterProducts(searchText);
   };
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", my: 3 }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        my: 3,
+        bgcolor: "#EEEDEB",
+      }}
+    >
       <TextField
         sx={{ width: "800px" }}
         onChange={handleSearch}
