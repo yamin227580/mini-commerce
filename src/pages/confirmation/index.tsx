@@ -4,7 +4,7 @@ import { Alert, Box, Button, Snackbar, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const confirmation = () => {
+const Confirmation = () => {
   const router = useRouter();
   const orderId = router.query.orderId as string;
   const status = router.query.status;
@@ -51,4 +51,4 @@ const confirmation = () => {
     </Box>
   );
 };
-export default confirmation;
+export default Confirmation;
