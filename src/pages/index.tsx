@@ -48,7 +48,12 @@ export default function Home() {
         }}
       >
         <Typography
-          sx={{ color: "#EDEBEE", fontSize: 35, mr: 8, cursor: "pointer" }}
+          sx={{
+            color: "#EDEBEE",
+            fontSize: 32,
+            mr: 8,
+            cursor: "pointer",
+          }}
         >
           Shopping
         </Typography>

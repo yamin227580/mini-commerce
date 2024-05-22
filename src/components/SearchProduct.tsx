@@ -28,7 +28,7 @@ const SearchProduct = ({ products, setFilterProducts }: Props) => {
       }}
     >
       <TextField
-        sx={{ width: "800px" }}
+        sx={{ width: "700px" }}
         onChange={handleSearch}
         placeholder="Search products..."
       />

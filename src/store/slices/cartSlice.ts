@@ -1,12 +1,12 @@
 import {
   CancelOrderOptions,
-  CartSlice,
+  CartSliceType,
   CreateOrderOptions,
 } from "@/types/cart";
 import { config } from "@/utils/config";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const initialState: CartSlice = {
+const initialState: CartSliceType = {
   items: [],
   isLoading: false,
   error: null,
