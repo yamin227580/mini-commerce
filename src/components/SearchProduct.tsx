@@ -25,10 +25,11 @@ const SearchProduct = ({ products, setFilterProducts }: Props) => {
         justifyContent: "center",
         my: 3,
         bgcolor: "#EEEDEB",
+        ml: { xs: 2, sm: 0 },
       }}
     >
       <TextField
-        sx={{ width: "700px" }}
+        sx={{ width: { xs: "280px", sm: "700px" } }}
         onChange={handleSearch}
         placeholder="Search products..."
       />

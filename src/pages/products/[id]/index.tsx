@@ -24,9 +24,13 @@ const ProductDetailPage = () => {
       }}
     >
       <Box
-        sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          justifyContent: "center",
+        }}
       >
-        <Box>
+        <Box sx={{ ml: { xs: 3, sm: 0 } }}>
           <img src={product?.imageUrl || ""} width={300} />
         </Box>
         <Box
@@ -48,7 +52,8 @@ const ProductDetailPage = () => {
             sx={{
               display: "flex",
               justifyContent: "flex-end",
-              mt: 12,
+              mt: { xs: 2, sm: 12 },
+              mb: { xs: 2, sm: 0 },
             }}
           >
             <Button variant="contained" onClick={handleCart}>

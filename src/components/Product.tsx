@@ -14,10 +14,11 @@ const Products = ({ products }: Props) => {
         display: "flex",
         justifyContent: "center",
         flexWrap: "wrap",
-        width: "80vw",
+        width: { xs: "90vw", sm: "80vw" },
         bgcolor: "#EFECEC",
         margin: "0 auto",
         mt: 20,
+        pl: { xs: 5, sm: 0 },
       }}
     >
       {products.map((item) => {

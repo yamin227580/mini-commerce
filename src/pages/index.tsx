@@ -31,6 +31,7 @@ export default function Home() {
         flexDirection: "column",
         justifyContent: "center",
         position: "relative",
+        width: "100%vw",
       }}
     >
       <Box
@@ -53,6 +54,7 @@ export default function Home() {
             fontSize: 32,
             mr: 8,
             cursor: "pointer",
+            display: { xs: "none", sm: "block" },
           }}
         >
           Shopping
@@ -69,7 +71,7 @@ export default function Home() {
               display: "flex",
               justifyContent: "flex-end",
               alignItems: "center",
-              ml: 5,
+              ml: { xs: 2, sm: 5 },
             }}
           >
             <ShoppingCartIcon

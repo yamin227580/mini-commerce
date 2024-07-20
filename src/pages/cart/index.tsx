@@ -43,7 +43,7 @@ const Cart = () => {
     <Box
       sx={{
         bgcolor: "#EFECEC",
-        width: "50vw",
+        width: { xs: "100vw", sm: "50vw" },
         margin: "0 auto",
       }}
     >
@@ -73,14 +73,22 @@ const Cart = () => {
                   <Box sx={{ display: "flex", alignItems: "center" }}>
                     <RemoveCircleOutlineIcon
                       onClick={() => decreaseQuantity(item.id, item.quantity)}
-                      sx={{ fontSize: 40, color: "green", cursor: "pointer" }}
+                      sx={{
+                        fontSize: { xs: 30, sm: 40 },
+                        color: "green",
+                        cursor: "pointer",
+                      }}
                     />
-                    <Typography sx={{ mx: 2 }} variant="h4">
+                    <Typography sx={{ mx: { xs: 0.5, sm: 2 } }} variant="h4">
                       {item.quantity}
                     </Typography>
                     <AddCircleOutlineIcon
                       onClick={() => increaseQuantity(item.id, item.quantity)}
-                      sx={{ fontSize: 40, color: "green", cursor: "pointer" }}
+                      sx={{
+                        fontSize: { xs: 30, sm: 40 },
+                        color: "green",
+                        cursor: "pointer",
+                      }}
                     />
                   </Box>
                 </Box>
